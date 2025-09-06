@@ -3,11 +3,11 @@
   <div class="max-w-7xl mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center justify-center gap-14 md:gap-20">
 
     <!-- Gambar Kepala Sekolah -->
-    <div class="relative flex justify-center" data-aos="fade-right" data-aos-duration="1000">
+    <div class="relative flex justify-center fade-in-right">
       <!-- Kotak Biru -->
       <div class="absolute -top-8 -left-8 w-72 h-[26rem] md:w-96 md:h-[32rem] bg-blue-900 hidden sm:block"></div>
 
-      <!-- Kotak Orange dengan Gambar -->
+      <!-- Kotak Orange dengan Gambar (statis) -->
       <div class="relative z-10 w-72 h-[26rem] md:w-96 md:h-[32rem] bg-orange-500 overflow-hidden shadow-xl md:rounded-none rounded-lg">
         <img src="assets/tentang/kepala-sekolah.png" alt="Kepala Sekolah" class="w-full h-full object-cover">
 
@@ -26,7 +26,7 @@
     </div>
 
     <!-- Teks Tentang Kami -->
-    <div class="text-center md:text-left max-w-xl" data-aos="fade-left" data-aos-duration="1000">
+    <div class="text-center md:text-left max-w-xl fade-in-left">
       <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
         Tentang <span class="text-orange-600">Kami</span>
       </h2>
@@ -38,21 +38,21 @@
       </p>
 
       <!-- Statistik -->
-      <div class="grid grid-cols-2 md:grid-cols-4 text-center mb-10 border border-orange-500">
-        <div class="stat-item px-6 py-6 border-b border-r border-orange-500 md:border-b-0" data-target="2550">
-          <p class="stat-number text-3xl font-bold text-gray-800">0</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 text-center mb-10 gap-y-8 md:gap-y-0">
+        <div class="stat-item px-6 fade-in-up">
+          <p class="stat-number text-3xl font-bold text-gray-800" data-target="2550">0</p>
           <span class="text-sm text-gray-600">Peserta Didik</span>
         </div>
-        <div class="stat-item px-6 py-6 border-b border-orange-500 md:border-b-0 md:border-r" data-target="200">
-          <p class="stat-number text-3xl font-bold text-gray-800">0</p>
+        <div class="stat-item px-6 fade-in-up delay-100">
+          <p class="stat-number text-3xl font-bold text-gray-800" data-target="200">0</p>
           <span class="text-sm text-gray-600">Guru & Tendik</span>
         </div>
-        <div class="stat-item px-6 py-6 border-r border-orange-500" data-target="40">
-          <p class="stat-number text-3xl font-bold text-gray-800">0</p>
+        <div class="stat-item px-6 fade-in-up delay-200">
+          <p class="stat-number text-3xl font-bold text-gray-800" data-target="40">0</p>
           <span class="text-sm text-gray-600">Ruang Kelas</span>
         </div>
-        <div class="stat-item px-6 py-6" data-target="6">
-          <p class="stat-number text-3xl font-bold text-gray-800">0</p>
+        <div class="stat-item px-6 fade-in-up delay-300">
+          <p class="stat-number text-3xl font-bold text-gray-800" data-target="6">0</p>
           <span class="text-sm text-gray-600">Lab Komputer</span>
         </div>
       </div>
@@ -60,48 +60,72 @@
       <!-- Tombol -->
       <a href="#"
         class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold 
-               px-6 md:px-8 py-2.5 md:py-3 shadow-lg rounded-lg transition">
+               px-6 md:px-8 py-2.5 md:py-3 shadow-lg rounded-lg transition transform hover:scale-105 hover:shadow-xl">
         Selengkapnya →
       </a>
     </div>
   </div>
 </section>
 
-<!-- Script Count Up (bersih + smooth + responsive) -->
+<!-- ================= STYLE ANIMASI ================= -->
+<style>
+.fade-in-up, .fade-in-left, .fade-in-right {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+.fade-in-left { transform: translateX(-30px); }
+.fade-in-right { transform: translateX(30px); }
+
+.fade-in-up.show,
+.fade-in-left.show,
+.fade-in-right.show {
+  opacity: 1;
+  transform: translate(0,0);
+}
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+</style>
+
+<!-- ================= SCRIPT ANIMASI + COUNT UP (REPEATABLE) ================= -->
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const counters = document.querySelectorAll(".stat-number");
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll(".fade-in-up, .fade-in-left, .fade-in-right");
+  const numbers = document.querySelectorAll(".stat-number");
 
-    counters.forEach(counter => {
-      const target = +counter.parentElement.getAttribute("data-target");
-      let started = false;
+  const animateNumber = (el) => {
+    const target = +el.getAttribute("data-target");
+    const duration = 2000; 
+    const startTime = performance.now();
 
-      const updateCount = () => {
-        const duration = 2000;
-        const startTime = performance.now();
+    function updateNumber(now) {
+      const progress = Math.min((now - startTime) / duration, 1);
+      const value = Math.floor(progress * target);
+      el.textContent = value.toLocaleString() + (target >= 100 ? "+" : "");
+      if (progress < 1) requestAnimationFrame(updateNumber);
+    }
+    requestAnimationFrame(updateNumber);
+  };
 
-        function animate(currentTime) {
-          const elapsed = currentTime - startTime;
-          const progress = Math.min(elapsed / duration, 1);
-          const eased = progress * (2 - progress);
-          counter.textContent = Math.floor(eased * target).toLocaleString();
-          if (progress < 1) {
-            requestAnimationFrame(animate);
-          } else {
-            counter.textContent = target.toLocaleString() + (target >= 100 ? "+" : "");
-          }
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        if (entry.target.classList.contains("stat-number")) {
+          animateNumber(entry.target);
         }
-        requestAnimationFrame(animate);
-      };
-
-      const observer = new IntersectionObserver(entries => {
-        if (entries[0].isIntersecting && !started) {
-          updateCount();
-          started = true;
+      } else {
+        // Reset ketika keluar viewport supaya bisa animasi lagi
+        if (entry.target.classList.contains("stat-number")) {
+          entry.target.textContent = "0";
         }
-      }, { threshold: 0.5 });
-
-      observer.observe(counter);
+        entry.target.classList.remove("show");
+      }
     });
-  });
+  }, { threshold: 0.3 });
+
+  elements.forEach(el => observer.observe(el));
+  numbers.forEach(num => observer.observe(num));
+});
 </script>

@@ -1,3 +1,4 @@
+<!-- ================= HERO BANNER ================= -->
 <section role="banner" class="relative bg-orange-500 overflow-hidden">
 
   <!-- ================= Network Icons ================= -->
@@ -24,7 +25,7 @@
       <h2 class="relative z-20 text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold 
                  leading-snug bg-clip-text text-transparent bg-gradient-to-r from-white via-yellow-100 to-white
                  drop-shadow-[0_0_8px_rgba(0,0,0,0.6)]
-                 w-full whitespace-normal line-clamp-4">
+                 w-full whitespace-normal">
         Presmalance hadir untuk siswa dan alumni SMK. Temukan magang, kerja paruh waktu, dan proyek freelance sesuai keahlianmu. Tingkatkan skill dan wujudkan karier impianmu!
       </h2>
 
@@ -37,58 +38,28 @@
 
     </div>
 
-    <!-- ======= Bagian Kanan: Gambar & Blur ======= -->
+    <!-- ======= Bagian Kanan: Gambar ======= -->
     <div class="relative md:col-span-4 flex justify-center md:justify-end mt-6 md:mt-0">
 
-      <!-- Efek Blur / Glow Lingkaran di bawah siswa -->
-      <div class="absolute bottom-[-20px] left-1/2 -translate-x-1/2 
-                  w-[280px] sm:w-[320px] md:w-[380px] 
-                  h-24 sm:h-28 md:h-32 
-                  bg-orange-500/90 
-                  blur-[80px] sm:blur-[90px] md:blur-[100px] 
-                  rounded-full z-10"></div>
-
-      <div class="absolute bottom-[-10px] left-1/2 -translate-x-1/2 
-                  w-[220px] sm:w-[260px] md:w-[300px] 
-                  h-16 sm:h-20 md:h-24 
-                  bg-white/90 
-                  blur-[60px] sm:blur-[70px] md:blur-[80px] 
-                  rounded-full z-10"></div>
-
-      <div class="absolute bottom-0 left-1/2 -translate-x-1/2 
-                  w-[160px] sm:w-[200px] md:w-[220px] 
-                  h-12 sm:h-14 md:h-16 
-                  bg-white 
-                  blur-[30px] sm:blur-[35px] md:blur-[40px] 
-                  rounded-full opacity-95 z-10"></div>
-
       <!-- Gambar Siswa -->
-      <img src="assets/presmalancer/siswa.png" 
+      <img src="assets/presmalancer/siswa.png"
            alt="Siswa" 
            class="relative z-20 max-h-[320px] sm:max-h-[380px] md:max-h-[420px] 
                   -translate-x-4 sm:-translate-x-8 md:-translate-x-16
                   translate-y-4 sm:translate-y-6 md:translate-y-8
                   drop-shadow-2xl w-auto">
-
-      <!-- Blur Overlay Oval Menyala -->
-      <div class="absolute bottom-[-180px] left-1/2 -translate-x-1/2
-                  w-[300px] h-[200px]
-                  bg-gradient-to-t from-orange-400/100 via-orange-500/100 to-orange-400/90
-                  rounded-full filter blur-4xl drop-shadow-[0_0_30px_rgba(255,165,0,0.7)]
-                  z-30 pointer-events-none"></div>
-
     </div>
 
     <!-- ======= Lingkaran Background ======= -->
     <div class="absolute top-1/2 left-[12%] -translate-y-1/2 
                 w-[400px] sm:w-[500px] md:w-[600px] 
                 h-[400px] sm:h-[500px] md:h-[600px] 
-                bg-white/30 rounded-full"></div>
+                bg-white/20 rounded-full"></div>
 
     <div class="absolute top-1/2 left-[35%] -translate-x-1/2 -translate-y-1/2 
                 w-[300px] sm:w-[350px] md:w-[400px] 
                 h-[300px] sm:h-[350px] md:h-[400px] 
-                bg-white/70 rounded-full"></div>
+                bg-white/40 rounded-full"></div>
 
   </div>
 

@@ -2,41 +2,36 @@
 
 @section('content')
 
-  <!-- ================= Hero Section ================= -->
-  <section class="bg-slate-900 text-white pt-20 pb-0 relative overflow-hidden">
-    <div class="container mx-auto px-6 grid md:grid-cols-2 gap-8 items-end relative z-10">
-      
-      <!-- Text -->
-      <div class="py-12 relative z-20 md:w-auto w-1/2">
-        <h1 class="text-2xl md:text-5xl font-extrabold leading-snug mb-3">
-          Pendaftaran Siswa Baru <br>
-          <span class="text-orange-500">SMK Prestasi Prima</span>
-        </h1>
-        <p class="text-sm md:text-xl mb-5">
-          Yuk bergabung bersama kami! Daftarkan dirimu sekarang untuk menjadi bagian dari generasi unggul 
-          yang siap menghadapi dunia kerja.
-        </p>
-        <a href="{{ route('pendaftaran.formulir') }}"
-           class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold px-4 py-2 rounded-lg shadow-lg transition text-xs md:text-base">
-          Join Now →
-        </a>
-      </div>
-
-      <!-- Image (desktop) -->
-      <div class="hidden md:flex justify-center items-end">
-        <img src="{{ asset('assets/pendaftaran/siswi.png') }}" 
-             alt="Pendaftaran Siswa Baru" 
-             class="max-h-[460px] md:max-h-[520px] object-contain drop-shadow-xl">
-      </div>
+  <!-- ================= Section Pendaftaran ================= -->
+<section class="bg-slate-900 text-white pt-20 pb-0 relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 md:px-8 grid md:grid-cols-2 gap-8 items-center relative z-10">
+    
+    <!-- Text -->
+    <div class="py-12 relative z-20">
+      <h1 class="text-2xl md:text-5xl font-extrabold leading-snug mb-3">
+        Pendaftaran Siswa Baru <br>
+        <span class="text-orange-500">SMK Prestasi Prima</span>
+      </h1>
+      <p class="text-sm md:text-xl mb-5 max-w-lg">
+        Yuk bergabung bersama kami! Daftarkan dirimu sekarang untuk menjadi bagian dari generasi unggul 
+        yang siap menghadapi dunia kerja.
+      </p>
+      <a href="{{ route('pendaftaran.formulir') }}"
+         class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold px-4 py-2 rounded-lg shadow-lg transition text-xs md:text-base">
+        Join Now →
+      </a>
     </div>
 
-    <!-- Image (mobile di kanan teks, lebih besar) -->
-    <div class="md:hidden absolute right-0 bottom-0 w-5/6 flex justify-end items-end z-0">
+    <!-- Image -->
+    <div class="flex justify-center md:justify-end items-center">
       <img src="{{ asset('assets/pendaftaran/siswi.png') }}" 
            alt="Pendaftaran Siswa Baru" 
-           class="max-h-[560px] w-full object-contain drop-shadow-xl">
+           class="max-h-[380px] sm:max-h-[440px] md:max-h-[500px] w-auto object-contain drop-shadow-xl">
     </div>
-  </section>
+
+  </div>
+</section>
+
 
   <!-- ================= Syarat Pendaftaran ================= -->
   <section id="syarat-pendaftaran" class="bg-gray-50 py-20">
