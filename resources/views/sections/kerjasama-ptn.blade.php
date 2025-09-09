@@ -15,49 +15,49 @@
       <!-- UNJ -->
       <div class="flex justify-center" data-aos="fade-up" data-aos-delay="100">
         <img src="assets/ptn/unj.png" alt="Universitas Negeri Jakarta" 
-             class="h-20 object-contain hover:scale-110 transition-transform duration-300">
+             class="h-25 object-contain hover:scale-110 transition-transform duration-300">
       </div>
 
       <!-- IPB -->
       <div class="flex justify-center" data-aos="fade-up" data-aos-delay="200">
         <img src="assets/ptn/ipb.png" alt="Institut Pertanian Bogor" 
-             class="h-20 object-contain hover:scale-110 transition-transform duration-300">
+             class="h-25 object-contain hover:scale-110 transition-transform duration-300">
       </div>
 
       <!-- UNPAD -->
       <div class="flex justify-center" data-aos="fade-up" data-aos-delay="300">
         <img src="assets/ptn/unpad.png" alt="Universitas Padjadjaran" 
-             class="h-20 object-contain hover:scale-110 transition-transform duration-300">
+             class="h-25 object-contain hover:scale-110 transition-transform duration-300">
       </div>
 
       <!-- Trisakti -->
       <div class="flex justify-center" data-aos="fade-up" data-aos-delay="400">
         <img src="assets/ptn/trisakti.png" alt="Universitas Trisakti" 
-             class="h-20 object-contain hover:scale-110 transition-transform duration-300">
+             class="h-25 object-contain hover:scale-110 transition-transform duration-300">
       </div>
 
       <!-- UIN Jakarta -->
       <div class="flex justify-center" data-aos="fade-up" data-aos-delay="500">
         <img src="assets/ptn/uin.png" alt="UIN Syarif Hidayatullah Jakarta" 
-             class="h-20 object-contain hover:scale-110 transition-transform duration-300">
+             class="h-25 object-contain hover:scale-110 transition-transform duration-300">
       </div>
 
       <!-- ISI Yogyakarta -->
       <div class="flex justify-center" data-aos="fade-up" data-aos-delay="600">
         <img src="assets/ptn/isi.png" alt="Institut Seni Indonesia Yogyakarta" 
-             class="h-20 object-contain hover:scale-110 transition-transform duration-300">
+             class="h-25 object-contain hover:scale-110 transition-transform duration-300">
       </div>
 
       <!-- Politeknik Prestasi Prima -->
       <div class="flex justify-center" data-aos="fade-up" data-aos-delay="700">
         <img src="assets/ptn/politeknik.png" alt="Politeknik Prestasi Prima" 
-             class="h-20 object-contain hover:scale-110 transition-transform duration-300">
+             class="h-25 object-contain hover:scale-110 transition-transform duration-300">
       </div>
 
       <!-- Universitas Indonesia -->
       <div class="flex justify-center" data-aos="fade-up" data-aos-delay="800">
         <img src="assets/ptn/ui.png" alt="Universitas Indonesia" 
-             class="h-20 object-contain hover:scale-110 transition-transform duration-300">
+             class="h-25 object-contain hover:scale-110 transition-transform duration-300">
       </div>
 
     </div>

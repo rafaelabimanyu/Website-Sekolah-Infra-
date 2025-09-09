@@ -1,62 +1,77 @@
 <!-- ================= SECTION INDUSTRI ================= -->
-<section id="industri" class="py-20 bg-gray-50 relative">
+<section id="industri" class="py-20 bg-gray-50 relative overflow-hidden">
   <div class="max-w-7xl mx-auto px-4 md:px-8 text-center">
 
     <!-- Sponsorship -->
     <div class="mb-16">
-      <h3 class="text-3xl font-bold text-orange-600">SPONSORSHIP</h3>
+      <h3 class="text-4xl font-extrabold text-orange-600">
+        SPONSORSHIP
+      </h3>
       <div class="mt-6 flex justify-center">
-        <img src="assets/industri/prambos.png" alt="Prambos" class="h-20 object-contain">
+        <img src="assets/industri/prambos.png" alt="Prambos" class="h-28 object-contain">
       </div>
     </div>
 
     <!-- Kerja Sama Industri -->
     <div>
-        <h3 class="text-3xl font-bold text-orange-600">KERJA SAMA INDUSTRI</h3>
-      <div class="mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 items-center justify-center">
+      <h3 class="text-4xl font-extrabold text-orange-600 mb-10">
+        KERJA SAMA INDUSTRI
+      </h3>
 
-        <!-- Telkom Indonesia -->
-        <div class="flex justify-center">
-          <img src="assets/industri/telkom.png" alt="Telkom Indonesia" class="h-12 object-contain">
+      <!-- Wrapper scroll -->
+      <div class="relative w-full overflow-hidden group">
+        <div class="flex animate-scroll space-x-20 group-hover:[animation-play-state:paused]">
+          
+          <!-- Telkom Indonesia -->
+          <img src="assets/industri/telkom.png" alt="Telkom Indonesia" class="h-28 object-contain">
+          
+          <!-- Komatsu -->
+          <img src="assets/industri/komatsu.png" alt="Komatsu" class="h-28 object-contain">
+          
+          <!-- Kemenkop UKM -->
+          <img src="assets/industri/kemenkop.png" alt="Kemenkop UKM" class="h-28 object-contain">
+          
+          <!-- Jatelindo -->
+          <img src="assets/industri/jatelindo.png" alt="Jatelindo" class="h-28 object-contain">
+          
+          <!-- Panasonic -->
+          <img src="assets/industri/panasonic.png" alt="Panasonic" class="h-28 object-contain">
+          
+          <!-- Antam -->
+          <img src="assets/industri/antam.png" alt="Antam" class="h-28 object-contain">
+          
+          <!-- StarVision -->
+          <img src="assets/industri/starvision.png" alt="StarVision" class="h-28 object-contain">
+          
+          <!-- Lembaga Negara -->
+          <img src="assets/industri/lemnegara.png" alt="Lembaga Negara" class="h-28 object-contain">
+          
+          <!-- Ulangi lagi biar looping halus -->
+          <img src="assets/industri/telkom.png" alt="Telkom Indonesia" class="h-28 object-contain">
+          <img src="assets/industri/komatsu.png" alt="Komatsu" class="h-28 object-contain">
+          <img src="assets/industri/kemenkop.png" alt="Kemenkop UKM" class="h-28 object-contain">
+          <img src="assets/industri/jatelindo.png" alt="Jatelindo" class="h-28 object-contain">
+          <img src="assets/industri/panasonic.png" alt="Panasonic" class="h-28 object-contain">
+          <img src="assets/industri/antam.png" alt="Antam" class="h-28 object-contain">
+          <img src="assets/industri/starvision.png" alt="StarVision" class="h-28 object-contain">
+          <img src="assets/industri/lemnegara.png" alt="Lembaga Negara" class="h-28 object-contain">
+
         </div>
-
-        <!-- Komatsu -->
-        <div class="flex justify-center">
-          <img src="assets/industri/komatsu.png" alt="Komatsu" class="h-12 object-contain">
-        </div>
-
-        <!-- Kemenkop UKM -->
-        <div class="flex justify-center">
-          <img src="assets/industri/kemenkop.png" alt="Kemenkop UKM" class="h-12 object-contain">
-        </div>
-
-        <!-- Jatelindo -->
-        <div class="flex justify-center">
-          <img src="assets/industri/jatelindo.png" alt="Jatelindo" class="h-12 object-contain">
-        </div>
-
-        <!-- Panasonic -->
-        <div class="flex justify-center">
-          <img src="assets/industri/panasonic.png" alt="Panasonic" class="h-12 object-contain">
-        </div>
-
-        <!-- Antam -->
-        <div class="flex justify-center">
-          <img src="assets/industri/antam.png" alt="Antam" class="h-12 object-contain">
-        </div>
-
-        <!-- StarVision -->
-        <div class="flex justify-center">
-          <img src="assets/industri/starvision.png" alt="StarVision" class="h-12 object-contain">
-        </div>
-
-        <!-- Lembaga Negara -->
-        <div class="flex justify-center">
-          <img src="assets/industri/lemnegara.png" alt="Lembaga Negara" class="h-12 object-contain">
-        </div>
-
       </div>
     </div>
-
   </div>
 </section>
+
+<style>
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll {
+  display: flex;
+  width: max-content;
+  animation: scroll 25s linear infinite;
+  animation-play-state: running;
+}
+</style>

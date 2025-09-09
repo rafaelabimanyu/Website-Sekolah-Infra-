@@ -42,7 +42,7 @@
     <div class="relative md:col-span-4 flex justify-center md:justify-end mt-6 md:mt-0">
 
       <!-- Gambar Siswa -->
-      <img src="assets/presmalancer/siswa.png"
+      <img src="assets/presmalancer/siswa2.png"
            alt="Siswa" 
            class="relative z-20 max-h-[320px] sm:max-h-[380px] md:max-h-[420px] 
                   -translate-x-4 sm:-translate-x-8 md:-translate-x-16

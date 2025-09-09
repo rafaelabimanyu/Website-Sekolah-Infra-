@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             CategorySeeder::class,
             GaleriSeeder::class,
+            StudentSeeder::class, // 🔹 Tambahin ini
         ]);
     }
 }
